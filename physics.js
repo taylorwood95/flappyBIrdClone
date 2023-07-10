@@ -13,6 +13,9 @@ const Physics = (entities, {touches, time, dispatch}) => {
     })
     Matter.Engine.update(engine, time.delta)
 
+    Matter.Body.translate(entities['ObstacleTop1'].body, { x: -3, y:0})
+    Matter.Body.translate(entities['ObstacleBottom1'].body, { x: -3, y:0})
+
     return entities
 }
 
